@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "version": "2026.10",
+  "releaseTag": "data-2026.10",
+  "sourceBuild": "20261008",
+  "license": "ODbL-1.0",
+  "attribution": "© OpenStreetMap contributors, Protomaps",
+  "downloadBase": "https://github.com/rickseven/tripr-data/releases/download/data-2026.10/",
+  "countries": [
+    {
+      "iso": "SGP",
+      "name": "Singapore",
+      "bbox": [
+        103.6404,
+        1.2643,
+        104.0034,
+        1.4486
+      ],
+      "packs": [
+        {
+          "tier": "lite",
+          "file": "SGP-z14.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 14,
+          "bytes": 9712608,
+          "sha256": "3b97fc700db84b8a574ba7e5ef45f99cee916a23317b0c09b38f6b7aa066d753"
+        }
+      ]
+    },
+    {
+      "iso": "MYS",
+      "name": "Malaysia",
+      "bbox": [
+        99.6452,
+        0.8514,
+        119.2781,
+        7.3558
+      ],
+      "packs": [
+        {
+          "tier": "lite",
+          "file": "MYS-z12.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 12,
+          "bytes": 37644796,
+          "sha256": "0cf544225a7bc09de005ac97f265b29e23c165f1e22ad0a9242c55b61ce59966"
+        },
+        {
+          "tier": "standard",
+          "file": "MYS-z13.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 13,
+          "bytes": 80965000,
+          "sha256": "233e393d9159a63f461ff1239048e3fda8abcddb9bd38c917b7a0f669ca9feb0"
+        }
+      ]
+    },
+    {
+      "iso": "IDN",
+      "name": "Indonesia",
+      "bbox": [
+        95.0127,
+        -10.9226,
+        140.9776,
+        5.9101
+      ],
+      "packs": [
+        {
+          "tier": "lite",
+          "file": "IDN-z9.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 9,
+          "bytes": 13703622,
+          "sha256": "dacecf37f353022c67e9fefc24c9a157af1b1cce33c82c080e44b1cee1136b9a"
+        },
+        {
+          "tier": "standard",
+          "file": "IDN-z12.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 12,
+          "bytes": 164617329,
+          "sha256": "3833b50b6511cfc903e3f21e4a0b44e6411a647332b2c15b240ce0f5cc29d320"
+        },
+        {
+          "tier": "detail",
+          "file": "IDN-z13.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 13,
+          "bytes": 338971226,
+          "sha256": "2b01078e924ff09ea51bb0fbe31cb4314623f7f2eec305ea15046287b2df7601"
+        }
+      ]
+    },
+    {
+      "iso": "CHE",
+      "name": "Switzerland",
+      "bbox": [
+        5.9548,
+        45.8207,
+        10.4666,
+        47.8012
+      ],
+      "packs": [
+        {
+          "tier": "lite",
+          "file": "CHE-z11.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 11,
+          "bytes": 38169945,
+          "sha256": "aa4cf1bc5f494801464a85a861e7bf199e83ac66d0878a911fcaaa7537a2ae3e"
+        },
+        {
+          "tier": "standard",
+          "file": "CHE-z14.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 14,
+          "bytes": 293699323,
+          "sha256": "d0d67a96dffd2b12732455621fb5728ce83dbeef3e5802b6824079a19afe82f3"
+        }
+      ]
+    },
+    {
+      "iso": "JPN",
+      "name": "Japan",
+      "bbox": [
+        122.9382,
+        24.2121,
+        153.9856,
+        45.5204
+      ],
+      "packs": [
+        {
+          "tier": "lite",
+          "file": "JPN-z9.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 9,
+          "bytes": 19927274,
+          "sha256": "19fba37a1dc44464d7fdadede3c89f101a7c8d97205ce3535995b13fd987aad2"
+        },
+        {
+          "tier": "standard",
+          "file": "JPN-z12.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 12,
+          "bytes": 255780219,
+          "sha256": "7d945ab62a25586a8b129aab0b631068f4ad91c0a5e18166d65a0ca10a9c724f"
+        },
+        {
+          "tier": "detail",
+          "file": "JPN-z13.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 13,
+          "bytes": 563012031,
+          "sha256": "92caaa70b201e14110262be091b521267a460045cbcd407b24a833f5d5f0288a"
+        }
+      ]
+    },
+    {
+      "iso": "DEU",
+      "name": "Germany",
+      "bbox": [
+        5.8525,
+        47.2711,
+        15.0221,
+        55.0653
+      ],
+      "packs": [
+        {
+          "tier": "lite",
+          "file": "DEU-z9.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 9,
+          "bytes": 43759791,
+          "sha256": "f1e97a8562f960e24c3ecb33fea98286a93bb6cc82fe81ab90071abf7605d9b9"
+        },
+        {
+          "tier": "standard",
+          "file": "DEU-z11.pmtiles",
+          "minzoom": 0,
+          "maxzoom": 11,
+          "bytes": 278192100,
+          "sha256": "72bebae3b531413fca1b662d8cf9175ad52664a254173f6bba605facc7695dad"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Every file in this repository is owned by its maintainer. With the rule in .github/ruleset-main.json
+# (and "Require review from Code Owners" if pull requests are ever enabled) nobody else can change anything.
+* @rickseven

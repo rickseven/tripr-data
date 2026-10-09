@@ -1,0 +1,23 @@
+{
+  "version": "2026.10",
+  "releaseTag": "data-2026.10",
+  "repo": "tripr-data",
+  "source": {
+    "name": "Protomaps basemap",
+    "build": "20261008",
+    "url": "https://build.protomaps.com/20261008.pmtiles",
+    "tool": "go-pmtiles 1.31.2 (pmtiles extract --region=<Natural Earth 1:10m admin-0 polygon> --maxzoom=N)",
+    "regions": "Natural Earth 1:10m admin-0 countries (public domain)"
+  },
+  "license": "ODbL-1.0",
+  "attribution": "© OpenStreetMap contributors, Protomaps",
+  "budgetsMB": { "lite": 50, "standard": 300, "detail": 600 },
+  "countries": [
+    { "iso": "SGP", "name": "Singapore" },
+    { "iso": "MYS", "name": "Malaysia" },
+    { "iso": "IDN", "name": "Indonesia" },
+    { "iso": "CHE", "name": "Switzerland" },
+    { "iso": "JPN", "name": "Japan" },
+    { "iso": "DEU", "name": "Germany" }
+  ]
+}

@@ -1,0 +1,4 @@
+# Large pack files are uploaded as GitHub Release assets, never committed (git rejects files over 100 MB).
+release-assets/
+*.pmtiles
+node_modules/

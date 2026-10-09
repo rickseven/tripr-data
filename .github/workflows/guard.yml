@@ -1,0 +1,32 @@
+# Fails for anything that does not come from the maintainer. Use it as a required status check
+# (see .github/SETTINGS.md); the repository rules do the real blocking, this makes violations visible.
+name: guard
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  MAINTAINER: rickseven
+
+jobs:
+  maintainer-only:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only the maintainer may change this repository
+        env:
+          ACTOR: ${{ github.actor }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          echo "actor=$ACTOR pull_request_author=${PR_AUTHOR:-none}"
+          if [ "$ACTOR" != "$MAINTAINER" ]; then
+            echo "::error::Changes are accepted only from $MAINTAINER (actor: $ACTOR)."
+            exit 1
+          fi
+          if [ -n "$PR_AUTHOR" ] && [ "$PR_AUTHOR" != "$MAINTAINER" ]; then
+            echo "::error::Pull requests are accepted only from $MAINTAINER (author: $PR_AUTHOR)."
+            exit 1
+          fi
