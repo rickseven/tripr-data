@@ -19,5 +19,16 @@
     { "iso": "CHE", "name": "Switzerland" },
     { "iso": "JPN", "name": "Japan" },
     { "iso": "DEU", "name": "Germany" }
-  ]
+  ],
+  "routing": {
+    "version": "2026.10",
+    "releaseTag": "routing-2026.10",
+    "source": {
+      "name": "BRouter data segments (.rd5, 5-degree squares) built from OpenStreetMap",
+      "url": "https://brouter.de/brouter/segments4/",
+      "note": "Re-hosting needs the maintainer's check of the brouter.de terms of use (docs/plan-m3b.md); the app never downloads from brouter.de"
+    },
+    "license": "ODbL-1.0",
+    "attribution": "© OpenStreetMap contributors"
+  }
 }

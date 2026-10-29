@@ -2,3 +2,5 @@
 release-assets/
 *.pmtiles
 node_modules/
+routing-assets/
+*.rd5

@@ -70,6 +70,17 @@ Privasi: commit memuat nama dan email dari `git config`. Untuk repo publik pakai
    Yang kedua harus menjawab `206 Partial Content` (unduhan bisa dilanjutkan).
 7. Beri tahu agent: URL katalog `https://rickseven.github.io/tripr-data/catalog.json`.
 
+## Data routing offline (opsional)
+
+Bagian `routing` di `catalog.json` berisi segmen BRouter (`.rd5`, kotak 5°×5°, dinamai menurut sudut barat daya, mis. `E105_S10.rd5`) dan segmen yang dibutuhkan tiap negara (dari bbox di katalog). Segmen yang dipakai dua negara hanya tercantum sekali. Berkas segmen ada di `routing-assets/` (diabaikan git) dan diunggah sebagai aset Release dengan tag terpisah (`routing-<tahun>.<bulan>`, lihat `config/sources.json`, bagian `routing`).
+
+```
+node scripts/build-routing.mjs --source <folder berisi .rd5> [--partial]   # tambah bagian routing ke catalog.json
+node scripts/verify.mjs --release                                         # ukuran dan sha256 segmen ikut diperiksa
+```
+
+Dari repo `tripr` semua ini bisa dijalankan lewat `node tools/data/data.mjs routing|verify|release`. Sumber segmen dan hak hosting ulang: lihat `docs/plan-m3b.md` di repo `tripr` (keputusan pemilik produk masih terbuka); jangan merilis segmen sebelum ketentuan penggunaannya diperiksa.
+
 ## Memperbarui data
 
 Rilis baru memakai tag baru (mis. `data-2026.11`): ubah `version` dan `releaseTag` di `config/sources.json`, ekstrak paket baru, jalankan `scripts/build-catalog.mjs --source <folder> --owner rickseven`, `scripts/verify.mjs --release`, buat rilis, lalu push `catalog.json`. Jangan menghapus rilis lama sampai versi aplikasi yang memakainya tidak beredar lagi.

@@ -53,6 +53,37 @@ for (const c of catalog.countries) {
 for (const f of readdirSync(join(root, 'release-assets')).filter((f) => f.endsWith('.pmtiles'))) {
   if (!listed.has(f)) fail(`${f}: in release-assets/ but not in catalog.json`);
 }
+// Routing section (optional): every listed segment must be in routing-assets/ with the recorded size and hash, every
+// country must name listed segments, and nothing may sit in routing-assets/ without being listed.
+if (catalog.routing) {
+  const r = catalog.routing;
+  if (release && r.downloadBase.includes('__OWNER__')) fail('routing.downloadBase still contains __OWNER__');
+  if (!/^https:\/\/github\.com\/[^/]+\/[^/]+\/releases\/download\/[^/]+\/$/.test(r.downloadBase)) fail(`odd routing.downloadBase ${r.downloadBase}`);
+  const routingDir = join(root, 'routing-assets');
+  const names = new Set();
+  for (const s of r.segments) {
+    if (!/^[EW]\d{1,3}_[NS]\d{1,2}\.rd5$/.test(s.file)) fail(`routing: bad segment name ${s.file}`);
+    if (names.has(s.file)) fail(`routing: duplicate segment ${s.file}`);
+    names.add(s.file);
+    const path = join(routingDir, s.file);
+    if (!existsSync(path)) {
+      fail(`routing: ${s.file} missing from routing-assets/`);
+      continue;
+    }
+    const size = statSync(path).size;
+    if (size !== s.bytes) fail(`routing: ${s.file} size ${size} differs from catalog ${s.bytes}`);
+    if (size >= 2 * 1024 ** 3) fail(`routing: ${s.file} not smaller than 2 GiB`);
+    if ((await sha256(path)) !== s.sha256) fail(`routing: ${s.file} sha256 differs from catalog`);
+  }
+  for (const [iso, files] of Object.entries(r.countries)) {
+    if (!isos.has(iso)) fail(`routing: ${iso} is not a country of the catalog`);
+    if (files.length === 0) fail(`routing: ${iso} has no segments`);
+    for (const f of files) if (!names.has(f)) fail(`routing: ${iso} needs unlisted segment ${f}`);
+  }
+  if (existsSync(routingDir)) {
+    for (const f of readdirSync(routingDir).filter((f) => f.endsWith('.rd5'))) if (!names.has(f)) fail(`routing: ${f} in routing-assets/ but not in catalog.json`);
+  }
+}
 for (const required of ['index.html', '.nojekyll', 'NOTICE.md', 'README.md', '.github/CODEOWNERS', '.github/SETTINGS.md', '.github/workflows/guard.yml', '.github/ruleset-main.json', '.github/ruleset-tags.json']) {
   if (!existsSync(join(root, required))) fail(`missing ${required}`);
 }
@@ -76,4 +107,4 @@ if (problems.length) {
   for (const p of problems) console.error(`  - ${p}`);
   process.exit(1);
 }
-console.log(`verify OK: ${catalog.countries.length} countries, ${listed.size} packs${release ? ', ready for release' : ''}`);
+console.log(`verify OK: ${catalog.countries.length} countries, ${listed.size} packs${catalog.routing ? `, ${catalog.routing.segments.length} routing segments` : ''}${release ? ', ready for release' : ''}`);
