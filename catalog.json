@@ -183,5 +183,304 @@
         }
       ]
     }
-  ]
+  ],
+  "routing": {
+    "version": "2026.10",
+    "releaseTag": "routing-2026.10",
+    "source": "BRouter data segments (.rd5, 5-degree squares) built from OpenStreetMap",
+    "license": "ODbL-1.0",
+    "attribution": "© OpenStreetMap contributors",
+    "downloadBase": "https://github.com/rickseven/tripr-data/releases/download/routing-2026.10/",
+    "segments": [
+      {
+        "file": "E100_N0.rd5",
+        "bytes": 35445203,
+        "sha256": "965da570a2e5c9510911c4e3e70f3118e301242d5b25213165e2e5162c4217cb"
+      },
+      {
+        "file": "E100_N5.rd5",
+        "bytes": 15056641,
+        "sha256": "cf3d35850823278b3e1f0ab4be6a83e6fafa1bad3eac1ebb5e2312f49845005e"
+      },
+      {
+        "file": "E100_S10.rd5",
+        "bytes": 1217631,
+        "sha256": "e3c1125c6b145c8713a1f50adf7a407362bbe6e49b333b7ca274a9c006be7767"
+      },
+      {
+        "file": "E100_S5.rd5",
+        "bytes": 18776470,
+        "sha256": "3b5997c8b60958b4c87fb5b6085c0ed76b11dfff2cae4accf269d623afa8bee4"
+      },
+      {
+        "file": "E105_N0.rd5",
+        "bytes": 2296802,
+        "sha256": "73c3dfae214d85e857daee683867fcc5539e17fe0aa8c6386025e04fe8bbcd0c"
+      },
+      {
+        "file": "E105_N5.rd5",
+        "bytes": 3787071,
+        "sha256": "f3e60a9b831ee2dd32015a0b1b6acdbaaa0b51a376ffe84c645e3a7c7004e4db"
+      },
+      {
+        "file": "E105_S10.rd5",
+        "bytes": 41713794,
+        "sha256": "538e513d914470d6874628107f5a15991a3bed11d40eed70586f028c9602e20e"
+      },
+      {
+        "file": "E105_S15.rd5",
+        "bytes": 29767,
+        "sha256": "7fc6028e1e9468a98fc1dfd833b19a5d19b41ed9997cf3c4c35d4effd716aa0f"
+      },
+      {
+        "file": "E105_S5.rd5",
+        "bytes": 4146985,
+        "sha256": "c527bcdc904707bd5a304b6e8e9705d29ae107e38626f229cec34a0e8d574ae2"
+      },
+      {
+        "file": "E110_N0.rd5",
+        "bytes": 10720120,
+        "sha256": "a3be8b184abae053c060b851c77ccdfaa796014b7bc7d0ab4c868f4fa1417a7b"
+      },
+      {
+        "file": "E110_N5.rd5",
+        "bytes": 52485,
+        "sha256": "1df74e6e6c4486a904eb79da633a745766d34a267c2dfff7a9550f68fcfa255f"
+      },
+      {
+        "file": "E110_S10.rd5",
+        "bytes": 38385717,
+        "sha256": "f7aab85bdde36d74bba4d1a3c1bfe09fd3ae12b245ccc292f30e51948c6e9cfd"
+      },
+      {
+        "file": "E110_S5.rd5",
+        "bytes": 7761598,
+        "sha256": "5607b3f1a7e207106fe804f592c633e9353516fa70c50f1025288f16eaea67aa"
+      },
+      {
+        "file": "E115_N0.rd5",
+        "bytes": 7195577,
+        "sha256": "fc663ef3eaee1d87da0b89f17467688b7d490c5d8b1464c71d00c5e4be891593"
+      },
+      {
+        "file": "E115_N5.rd5",
+        "bytes": 7433798,
+        "sha256": "b0f6c2777ea36d0ff051dadf8b565df6ba45d690c78253c1c2b41e58d3f9ada2"
+      },
+      {
+        "file": "E115_S10.rd5",
+        "bytes": 10035257,
+        "sha256": "95da261d9e10923de01565d2228787ecbed75f23e887fec37441972376ed3db7"
+      },
+      {
+        "file": "E115_S15.rd5",
+        "bytes": 6298,
+        "sha256": "e14d567f8de08f8446e0559454a93320d20afd7bdbb2273c92dd19927ca00cf5"
+      },
+      {
+        "file": "E115_S5.rd5",
+        "bytes": 12180762,
+        "sha256": "90b451b9ad6386c2433b317a6e0c9ffb09b509cffa0542ce6089dee63d93f167"
+      },
+      {
+        "file": "E120_N0.rd5",
+        "bytes": 3460552,
+        "sha256": "98769a0bc26802f8313d97c6759f70c97621ea6ab9f00fe8b0c72a7429648eec"
+      },
+      {
+        "file": "E120_N5.rd5",
+        "bytes": 12731237,
+        "sha256": "74f34e31b2d15399a61e16b6cda8b267e7860ae633c08ef9e4d2469919a9dc74"
+      },
+      {
+        "file": "E120_S10.rd5",
+        "bytes": 6412257,
+        "sha256": "de7a7b23f3a62238642478b1aaed493322f75d363f93db6acd65cde177f19f98"
+      },
+      {
+        "file": "E120_S15.rd5",
+        "bytes": 1439619,
+        "sha256": "1a0e6eb39940e045666ce2d4fff00e1bd0b8af27dd1448b0bd8ba3a87d4f69de"
+      },
+      {
+        "file": "E120_S5.rd5",
+        "bytes": 6307797,
+        "sha256": "b67f72e14b75f58ffe168997bc36c6f907c777e3a1266ee97904cba7aec50382"
+      },
+      {
+        "file": "E125_N0.rd5",
+        "bytes": 1612380,
+        "sha256": "adc52fd6c1b0ff541366a5452167979819da107b930e96ca1a2ec0398b15867b"
+      },
+      {
+        "file": "E125_N5.rd5",
+        "bytes": 10508389,
+        "sha256": "b375247eeafdbd56547aa762052b5a45328c5ff54b7d9fe4a19c9a5a022a2c6f"
+      },
+      {
+        "file": "E125_S10.rd5",
+        "bytes": 1937924,
+        "sha256": "59c2d7717a45088bc719aea996486d857c64c68922a77eae7163f0d016f680a3"
+      },
+      {
+        "file": "E125_S15.rd5",
+        "bytes": 143337,
+        "sha256": "de6d727ee849a59d221db6d948ceb8ac3899f06102d6c0eb9be98e1d37b34e27"
+      },
+      {
+        "file": "E125_S5.rd5",
+        "bytes": 1682408,
+        "sha256": "654443b13b5694b877f731e9f371096bcacb96c92b3fdcc8119508800bcd3b4f"
+      },
+      {
+        "file": "E130_N0.rd5",
+        "bytes": 27796,
+        "sha256": "10cd998cd3b53c6028bed54cb1ee1f90ef266194d192232d4ac865d0e23a6be2"
+      },
+      {
+        "file": "E130_N5.rd5",
+        "bytes": 73534,
+        "sha256": "2e52b2a52ce22cf601e29ef27ddfe76026f9b9a833c021033f23cae1d7c4f31e"
+      },
+      {
+        "file": "E130_S10.rd5",
+        "bytes": 361151,
+        "sha256": "1c49b24783c94d1a3c86c0046fba38d2b0d826b8fdfa2b454f145c139fb144a3"
+      },
+      {
+        "file": "E130_S15.rd5",
+        "bytes": 1664682,
+        "sha256": "a99cd311d5deebd6a287da381cbcecaeaf3be4c6a500dac069583fd205db6faa"
+      },
+      {
+        "file": "E130_S5.rd5",
+        "bytes": 2118076,
+        "sha256": "158298e076717ebf0c7b3aae0439069acb3bac0556c56f912ebe405a68aea6ca"
+      },
+      {
+        "file": "E135_N5.rd5",
+        "bytes": 26185,
+        "sha256": "31a7d0ef74195b848444e7b57239683035735876bcb41689c0df4ce320f5e994"
+      },
+      {
+        "file": "E135_S10.rd5",
+        "bytes": 430754,
+        "sha256": "06fbb0ca399ed96bd54a6bf23ce9d5fa5ee21c5d69ae22f778f118c8cc5efe92"
+      },
+      {
+        "file": "E135_S15.rd5",
+        "bytes": 263646,
+        "sha256": "b51df5bf2fa6d3d2ee0884212a797386193098bd8bdb71eccee531ffc17a2768"
+      },
+      {
+        "file": "E135_S5.rd5",
+        "bytes": 3467672,
+        "sha256": "5861e8ba391ccbb24440443002fc1a0099c17b1b5672cd39b4774a10c6b27a91"
+      },
+      {
+        "file": "E140_N5.rd5",
+        "bytes": 9050,
+        "sha256": "b1c9879c2071a6d151a68b3466ee2d4f0c9320073889bd1bb5583074348d6e3f"
+      },
+      {
+        "file": "E140_S10.rd5",
+        "bytes": 4003216,
+        "sha256": "44205109ae36fdc3dd6c53201c5b20338310f78145371ba5907ca64540aabcf6"
+      },
+      {
+        "file": "E140_S15.rd5",
+        "bytes": 510540,
+        "sha256": "aaf605eb99a768330341aa5e7c9f2fbb6747365259df2f073892497e8162fe2c"
+      },
+      {
+        "file": "E140_S5.rd5",
+        "bytes": 3733772,
+        "sha256": "eb0d58a43b2cb1ba83144b8f80bf68ce74ad6433b3ab1d9ef99e2733023ca5e9"
+      },
+      {
+        "file": "E95_N0.rd5",
+        "bytes": 13690418,
+        "sha256": "5646fce060bb7133aab46b071c9cc69bf72e2e6001da80cebc542e121173847b"
+      },
+      {
+        "file": "E95_N5.rd5",
+        "bytes": 8570922,
+        "sha256": "a26117770afc33182792bf35e3e2db0f0ab04838ecb52e06a4a90b831d22e789"
+      },
+      {
+        "file": "E95_S15.rd5",
+        "bytes": 10413,
+        "sha256": "9fdb8bce86a0a3776f0c9686b6d44eb7cf892c8a71c86d44412e0690176b6c4e"
+      },
+      {
+        "file": "E95_S5.rd5",
+        "bytes": 301686,
+        "sha256": "3ff5c2a250d7d9f83d6aaebbbd4aba1f40b8c8a6f614614e11e3e38ac2b6d530"
+      }
+    ],
+    "countries": {
+      "SGP": [
+        "E100_N0.rd5"
+      ],
+      "MYS": [
+        "E95_N0.rd5",
+        "E100_N0.rd5",
+        "E105_N0.rd5",
+        "E110_N0.rd5",
+        "E115_N0.rd5",
+        "E95_N5.rd5",
+        "E100_N5.rd5",
+        "E105_N5.rd5",
+        "E110_N5.rd5",
+        "E115_N5.rd5"
+      ],
+      "IDN": [
+        "E95_S15.rd5",
+        "E105_S15.rd5",
+        "E115_S15.rd5",
+        "E120_S15.rd5",
+        "E125_S15.rd5",
+        "E130_S15.rd5",
+        "E135_S15.rd5",
+        "E140_S15.rd5",
+        "E100_S10.rd5",
+        "E105_S10.rd5",
+        "E110_S10.rd5",
+        "E115_S10.rd5",
+        "E120_S10.rd5",
+        "E125_S10.rd5",
+        "E130_S10.rd5",
+        "E135_S10.rd5",
+        "E140_S10.rd5",
+        "E95_S5.rd5",
+        "E100_S5.rd5",
+        "E105_S5.rd5",
+        "E110_S5.rd5",
+        "E115_S5.rd5",
+        "E120_S5.rd5",
+        "E125_S5.rd5",
+        "E130_S5.rd5",
+        "E135_S5.rd5",
+        "E140_S5.rd5",
+        "E95_N0.rd5",
+        "E100_N0.rd5",
+        "E105_N0.rd5",
+        "E110_N0.rd5",
+        "E115_N0.rd5",
+        "E120_N0.rd5",
+        "E125_N0.rd5",
+        "E130_N0.rd5",
+        "E95_N5.rd5",
+        "E100_N5.rd5",
+        "E105_N5.rd5",
+        "E110_N5.rd5",
+        "E115_N5.rd5",
+        "E120_N5.rd5",
+        "E125_N5.rd5",
+        "E130_N5.rd5",
+        "E135_N5.rd5",
+        "E140_N5.rd5"
+      ]
+    }
+  }
 }

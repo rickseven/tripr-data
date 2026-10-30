@@ -6,7 +6,9 @@
 //
 // A country needs every 5° square its bounding box touches (the box comes from catalog.json). Without --partial the
 // run fails when a square is missing from --source; with --partial, countries that are not fully covered are left
-// out and listed. Settings live in config/sources.json under "routing".
+// out and listed. With --skip-missing, squares that are absent from --source are dropped from a country's list instead
+// (BRouter publishes no file for squares without roads, such as open sea); a country with no square left is still an error.
+// Settings live in config/sources.json under "routing".
 import { createHash } from 'node:crypto';
 import { copyFileSync, createReadStream, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -41,6 +43,12 @@ const skipped = [];
 for (const c of catalog.countries) {
   const names = segmentsForBbox(c.bbox);
   const missing = names.filter((n) => !existsSync(join(sourceDir, n)));
+  if (missing.length && args['skip-missing'] && missing.length < names.length) {
+    // BRouter publishes no file for squares without roads (open sea): drop them from the list.
+    console.log(`${c.iso}: dropped squares without a file: ${missing.join(', ')}`);
+    countries[c.iso] = names.filter((n) => !missing.includes(n));
+    continue;
+  }
   if (missing.length) {
     if (!args.partial) throw new Error(`${c.iso}: missing ${missing.length} of ${names.length} segments in ${sourceDir}: ${missing.join(', ')} (use --partial to skip such countries)`);
     skipped.push(`${c.iso} (missing ${missing.join(', ')})`);
